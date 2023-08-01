@@ -3,7 +3,9 @@ enum SummaryScreenAssembly {
         let viewModel = SummaryScreenViewModelImp(
             .init(
                 getSkillsOfProfileUseCase: UseCaseProvider.instance.getSkillsOfProfileUseCase,
-                getProfileUseCase: UseCaseProvider.instance.getProfileUseCase
+                getProfileUseCase: UseCaseProvider.instance.getProfileUseCase,
+                addSkillOfProfileUseCase: UseCaseProvider.instance.addNewSkillUseCase,
+                deleteSkillOfProfileUseCase: UseCaseProvider.instance.deleteSkillOfProfileUseCase
             )
         )
 

@@ -1,11 +1,20 @@
 final class GetProfileUseCase {
     
-    public func invoke() -> Profile {
-        return Profile(
-            name: "Иванов Иван Иванович",
-            shortDescription: "Middle iOS-разработчик, опыт более 2-х лет",
-            description: "Опытный инженер-программист, специализирующийся на разработке масштабируемых и обслуживаемых систем",
-            place: "Воронеж"
-        )
+    // MARK: - Private Propeties
+    
+    private let database: ProfileDatabase
+    
+    // MARK: - Init
+    
+    init(
+        database: ProfileDatabase
+    ) {
+        self.database = database
+    }
+    
+    // MARK: - Use Case
+    
+    func invoke() -> Profile {
+        database.getProfile()
     }
 }

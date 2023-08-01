@@ -61,7 +61,8 @@ final class AboutPersonBlockView: UIView {
             
             informationPersonLabel.topAnchor.constraint(equalTo: titleBlockLabel.bottomAnchor, constant: 8),
             informationPersonLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            informationPersonLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            informationPersonLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            informationPersonLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }

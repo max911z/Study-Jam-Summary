@@ -45,5 +45,50 @@ final class SummaryScreenViewController: UIViewController {
         viewModel.profile.bind { [ weak self ] profile in
             self?.customView.setProfileData(profile)
         }
+        
+        customView.skillsBlockBiew.skillLabelDeleteButtonTap = { [ weak self ] skill in
+            self?.viewModel.deleteSkill(id: skill.id)
+        }
+        
+        customView.skillsBlockBiew.plusSkillButtonTap = { [ weak self ] in
+            self?.showAlertForAddNewSkill()
+        }
+    }
+    
+    private func showAlertForAddNewSkill() {
+        let alertController = UIAlertController(
+            title: "Добавление навыка",
+            message: "Введите название навыка которым вы владеете",
+            preferredStyle: .alert
+        )
+        
+        alertController.addTextField { titleTextField in
+            titleTextField.textColor = AppColors.lightBlack
+            titleTextField.attributedPlaceholder = NSAttributedString(
+                string: "Введите название",
+                attributes: [NSAttributedString.Key.foregroundColor : AppColors.gray]
+            )
+        }
+        
+        let cancelAction = UIAlertAction(
+            title: "Отмена",
+            style: .cancel
+        )
+        let addAction = UIAlertAction(
+            title: "Добавить",
+            style: .default
+        ) { [ weak self ] _ in
+            if let titleTextField = alertController.textFields?[0],
+                let title = titleTextField.text {
+                self?.viewModel.addNewSkill(title: title)
+            }
+        }
+        
+        alertController.addActions(
+            cancelAction,
+            addAction
+        )
+        
+        present(alertController, animated: true)
     }
 }

@@ -1,14 +1,18 @@
 protocol SummaryScreenViewModel: AnyObject {
     
-    // MARK: - Input
-
-    func viewDidLoad()
-    
     // MARK: - Output
     
     var profile: Observable<Profile> { get }
     
     var skills: Observable<[Skill]> { get }
+    
+    // MARK: - Input
+
+    func viewDidLoad()
+    
+    func addNewSkill(title: String)
+    
+    func deleteSkill(id: String)
 }
 
 final class SummaryScreenViewModelImp: SummaryScreenViewModel {
@@ -36,6 +40,32 @@ final class SummaryScreenViewModelImp: SummaryScreenViewModel {
         getSkillsOfProfile()
     }
     
+    func addNewSkill(title: String) {
+        dependencies.addSkillOfProfileUseCase.invoke(
+            title: title
+        ) { [weak self] result in
+            switch result {
+            case .success:
+                self?.getSkillsOfProfile()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func deleteSkill(id: String) {
+        dependencies.deleteSkillOfProfileUseCase.invoke(
+            id: id
+        ) { [weak self] result in
+            switch result {
+            case .success:
+                self?.getSkillsOfProfile()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     // MARK: - Private Methods
     
     private func getSkillsOfProfile() {
@@ -53,5 +83,7 @@ extension SummaryScreenViewModelImp {
     struct Dependencies {
         let getSkillsOfProfileUseCase: GetSkillsOfProfileUseCase
         let getProfileUseCase: GetProfileUseCase
+        let addSkillOfProfileUseCase: AddSkillOfProfileUseCase
+        let deleteSkillOfProfileUseCase: DeleteSkillOfProfileUseCase
     }
 }

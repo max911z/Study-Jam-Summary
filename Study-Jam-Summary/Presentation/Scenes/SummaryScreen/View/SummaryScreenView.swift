@@ -6,7 +6,13 @@ final class SummaryScreenView: UIView {
     
     let skillsBlockBiew = SkillsBlockView()
     
-    private let scrollView = UIScrollView()
+    private let scrollView: UIScrollView = {
+        $0.showsVerticalScrollIndicator = false
+        $0.contentInsetAdjustmentBehavior = .never
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        
+        return $0
+    }(UIScrollView())
     
     private let contentView = UIView()
     
@@ -38,6 +44,11 @@ final class SummaryScreenView: UIView {
         configureUI()
         setupViews()
         setupConstraints()
+        
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        profileBlockView.translatesAutoresizingMaskIntoConstraints = false
+        skillsBlockBiew.translatesAutoresizingMaskIntoConstraints = false
+        aboutPersonBlockView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     private func configureUI() {
@@ -45,15 +56,11 @@ final class SummaryScreenView: UIView {
     }
     
     private func setupViews() {
-//        addSubview(scrollView)
-//
-//        scrollView.addSubview(contentView)
-//
-//        contentView.addSubviews(
-//            titleScreenLabel
-//        )
-        
-        addSubviews(
+        addSubview(scrollView)
+
+        scrollView.addSubview(contentView)
+
+        contentView.addSubviews(
             profileBlockView,
             skillsBlockBiew,
             aboutPersonBlockView
@@ -61,37 +68,33 @@ final class SummaryScreenView: UIView {
     }
     
     private func setupConstraints() {
-        //        NSLayoutConstraint.activate([
-        //            scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-        //            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-        //            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
-        //            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        //        ])
-        //
-        //        NSLayoutConstraint.activate([
-        //            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-        //            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
-        //            contentView.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor),
-        //            contentView.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor)
-        //        ])
-        
-        profileBlockView.translatesAutoresizingMaskIntoConstraints = false
-        skillsBlockBiew.translatesAutoresizingMaskIntoConstraints = false
-        aboutPersonBlockView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+        ])
         
         NSLayoutConstraint.activate([
-            profileBlockView.topAnchor.constraint(equalTo: topAnchor),
-            profileBlockView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            profileBlockView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.frameLayoutGuide.trailingAnchor),
+        ])
+        
+        NSLayoutConstraint.activate([
+            profileBlockView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            profileBlockView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            profileBlockView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             skillsBlockBiew.topAnchor.constraint(equalTo: profileBlockView.bottomAnchor, constant: 21),
-            skillsBlockBiew.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            skillsBlockBiew.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            skillsBlockBiew.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            skillsBlockBiew.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             aboutPersonBlockView.topAnchor.constraint(equalTo: skillsBlockBiew.bottomAnchor, constant: 24),
-            aboutPersonBlockView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            aboutPersonBlockView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            aboutPersonBlockView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -24)
+            aboutPersonBlockView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            aboutPersonBlockView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            aboutPersonBlockView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
         ])
     }
 }

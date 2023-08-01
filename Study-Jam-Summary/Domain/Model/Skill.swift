@@ -1,11 +1,19 @@
+import Foundation
+
 struct Skill {
-    let title: String
+    var id: String
+    var title: String
     
     init() {
+        id = String()
         title = String()
     }
     
-    init(title: String) {
+    init(
+        id: String,
+        title: String
+    ) {
+        self.id = id
         self.title = title
     }
 }

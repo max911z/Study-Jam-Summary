@@ -21,7 +21,7 @@ final class SkillsBlockView: UIView {
         return $0
     }(UIButton(type: .system))
     
-    private let competeButton: UIButton =  {
+    private let completeButton: UIButton =  {
         $0.setImage(AppImages.completeIcon, for: .normal)
         $0.tintColor = AppColors.black
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -30,6 +30,16 @@ final class SkillsBlockView: UIView {
     }(UIButton(type: .system))
     
     private let skillLabelsView = SkillLabelsView()
+    
+    // MARK: - Properties
+    
+    var editButtonTap: (() -> Void)?
+    
+    var completeButtonTap: (() -> Void)?
+    
+    var skillLabelDeleteButtonTap: ((Skill) -> Void)?
+    
+    var plusSkillButtonTap: (() -> Void)?
     
     // MARK: - Inits
     
@@ -51,9 +61,20 @@ final class SkillsBlockView: UIView {
     // MARK: - Private Properties
     
     private func setup() {
+        setupBindings()
         setupViews()
         setupConstraints()
         configureActions()
+    }
+    
+    private func setupBindings() {
+        skillLabelsView.skillLabelDeleteButtonTap = { [ weak self ] skill in
+            self?.skillLabelDeleteButtonTap?(skill)
+        }
+        
+        skillLabelsView.plusButtonTap = { [ weak self ] in
+            self?.plusSkillButtonTap?()
+        }
     }
     
     private func setupViews() {
@@ -71,21 +92,61 @@ final class SkillsBlockView: UIView {
             titleBlockLabel.topAnchor.constraint(equalTo: topAnchor),
             titleBlockLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleBlockLabel.trailingAnchor.constraint(greaterThanOrEqualTo: editButton.leadingAnchor, constant: 8),
+            titleBlockLabel.heightAnchor.constraint(equalToConstant: 24),
             
-            editButton.topAnchor.constraint(equalTo: topAnchor),
-            editButton.widthAnchor.constraint(equalToConstant: 24),
-            editButton.heightAnchor.constraint(equalToConstant: 24),
-            editButton.trailingAnchor.constraint(equalTo: trailingAnchor),
-            
-            skillLabelsView.topAnchor.constraint(equalTo: editButton.bottomAnchor, constant: 16),
+            skillLabelsView.topAnchor.constraint(equalTo: titleBlockLabel.bottomAnchor, constant: 16),
             skillLabelsView.leadingAnchor.constraint(equalTo: leadingAnchor),
             skillLabelsView.trailingAnchor.constraint(equalTo: trailingAnchor),
             skillLabelsView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        
+        setupConstraintForButton(button: editButton)
     }
     
     private func configureActions() {
+        editButton.addTarget(self, action: #selector(onEditButtonTap), for: .touchUpInside)
+        completeButton.addTarget(self, action: #selector(onCompleteButtonTap), for: .touchUpInside)
+    }
+    
+    private func setupEditButton() {
+        addSubview(editButton)
         
+        setupConstraintForButton(button: editButton)
+        
+        completeButton.removeFromSuperview()
+    }
+    
+    private func setupCompeteButton() {
+        addSubview(completeButton)
+        
+        setupConstraintForButton(button: completeButton)
+        
+        editButton.removeFromSuperview()
+    }
+    
+    private func setupConstraintForButton(button: UIButton) {
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: topAnchor),
+            button.widthAnchor.constraint(equalToConstant: 24),
+            button.heightAnchor.constraint(equalToConstant: 24),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
+    
+    // MARK: - Actions
+    
+    @objc
+    private func onEditButtonTap() {
+        setupCompeteButton()
+        skillLabelsView.isEditMode.toggle()
+        editButtonTap?()
+    }
+    
+    @objc
+    private func onCompleteButtonTap() {
+        setupEditButton()
+        skillLabelsView.isEditMode.toggle()
+        completeButtonTap?()
     }
 }
 

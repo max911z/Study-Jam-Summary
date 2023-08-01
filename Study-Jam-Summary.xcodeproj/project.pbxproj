@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F3AAC3A62A78E7F700FAD3EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3A52A78E7F700FAD3EB /* AppDelegate.swift */; };
 		F3AAC3A82A78E7F700FAD3EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3A72A78E7F700FAD3EB /* SceneDelegate.swift */; };
-		F3AAC3AF2A78E7F900FAD3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC3AE2A78E7F900FAD3EB /* Assets.xcassets */; };
+		F3AAC3AF2A78E7F900FAD3EB /* AppImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC3AE2A78E7F900FAD3EB /* AppImages.xcassets */; };
 		F3AAC3B22A78E7F900FAD3EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC3B02A78E7F900FAD3EB /* LaunchScreen.storyboard */; };
 		F3AAC3D42A78EC2300FAD3EB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3D32A78EC2300FAD3EB /* Observable.swift */; };
 		F3AAC3DC2A78ED2700FAD3EB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3DB2A78ED2700FAD3EB /* AppCoordinator.swift */; };
@@ -20,13 +20,41 @@
 		F3AAC3E82A78F05E00FAD3EB /* SummaryScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3E72A78F05E00FAD3EB /* SummaryScreenAssembly.swift */; };
 		F3AAC3EA2A78F09700FAD3EB /* SummaryScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3E92A78F09700FAD3EB /* SummaryScreenViewController.swift */; };
 		F3AAC3EC2A78F09B00FAD3EB /* SummaryScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3EB2A78F09B00FAD3EB /* SummaryScreenView.swift */; };
+		F3AAC3EF2A78F9F800FAD3EB /* UIView+extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3EE2A78F9F800FAD3EB /* UIView+extra.swift */; };
+		F3AAC3F32A78FA6600FAD3EB /* ProfileBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3F22A78FA6600FAD3EB /* ProfileBlockView.swift */; };
+		F3AAC3F52A78FA7D00FAD3EB /* SkillsBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3F42A78FA7D00FAD3EB /* SkillsBlockView.swift */; };
+		F3AAC3FB2A78FBDB00FAD3EB /* AppColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC3FA2A78FBDB00FAD3EB /* AppColors.xcassets */; };
+		F3AAC3FD2A78FC8D00FAD3EB /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3FC2A78FC8D00FAD3EB /* AppColors.swift */; };
+		F3AAC4002A78FD7D00FAD3EB /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3FF2A78FD7D00FAD3EB /* AppFonts.swift */; };
+		F3AAC4082A79099300FAD3EB /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4072A79099300FAD3EB /* CircleImageView.swift */; };
+		F3AAC40A2A790A3800FAD3EB /* UIStackView+extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4092A790A3800FAD3EB /* UIStackView+extra.swift */; };
+		F3AAC40C2A790B3F00FAD3EB /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC40B2A790B3F00FAD3EB /* AppImages.swift */; };
+		F3AAC40E2A79162900FAD3EB /* NSLayoutConstraint+priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC40D2A79162900FAD3EB /* NSLayoutConstraint+priority.swift */; };
+		F3AAC4102A79184D00FAD3EB /* SkillLabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC40F2A79184D00FAD3EB /* SkillLabelsView.swift */; };
+		F3AAC4132A79187D00FAD3EB /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4122A79187D00FAD3EB /* Skill.swift */; };
+		F3AAC4152A791EB300FAD3EB /* GetSkillsOfProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4142A791EB300FAD3EB /* GetSkillsOfProfileUseCase.swift */; };
+		F3AAC4182A791F1900FAD3EB /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4172A791F1900FAD3EB /* UseCaseProvider.swift */; };
+		F3AAC41A2A79217C00FAD3EB /* AboutPersonBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4192A79217C00FAD3EB /* AboutPersonBlockView.swift */; };
+		F3AAC41C2A79233B00FAD3EB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC41B2A79233B00FAD3EB /* Profile.swift */; };
+		F3AAC41E2A79237400FAD3EB /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC41D2A79237400FAD3EB /* GetProfileUseCase.swift */; };
+		F3AAC4282A7927A600FAD3EB /* sfProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC4252A7927A600FAD3EB /* sfProDisplay-Bold.otf */; };
+		F3AAC4292A7927A600FAD3EB /* sfProDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC4262A7927A600FAD3EB /* sfProDisplay-Medium.otf */; };
+		F3AAC42A2A7927A600FAD3EB /* sfProDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC4272A7927A600FAD3EB /* sfProDisplay-Regular.otf */; };
+		F3AAC42C2A792A2F00FAD3EB /* DeleteSkillOfProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC42B2A792A2F00FAD3EB /* DeleteSkillOfProfileUseCase.swift */; };
+		F3AAC4342A792AE600FAD3EB /* ProfileDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4332A792AE600FAD3EB /* ProfileDatabase.swift */; };
+		F3AAC4362A792AEC00FAD3EB /* SkillsOfProfileDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4352A792AEC00FAD3EB /* SkillsOfProfileDatabase.swift */; };
+		F3AAC4382A792E2600FAD3EB /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4372A792E2600FAD3EB /* DatabaseProvider.swift */; };
+		F3AAC43B2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC43A2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift */; };
+		F3AAC43D2A79365F00FAD3EB /* SkillLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC43C2A79365F00FAD3EB /* SkillLabelView.swift */; };
+		F3AAC4402A7958B000FAD3EB /* UIAlertController+extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC43F2A7958B000FAD3EB /* UIAlertController+extra.swift */; };
+		F3DF971B2A7977C400F672B3 /* GetAvatarProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF971A2A7977C400F672B3 /* GetAvatarProfileUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3AAC3A22A78E7F700FAD3EB /* Study-Jam-Summary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study-Jam-Summary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AAC3A52A78E7F700FAD3EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3AAC3A72A78E7F700FAD3EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3AAC3AE2A78E7F900FAD3EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3AAC3AE2A78E7F900FAD3EB /* AppImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppImages.xcassets; sourceTree = "<group>"; };
 		F3AAC3B12A78E7F900FAD3EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3AAC3B32A78E7F900FAD3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3AAC3D32A78EC2300FAD3EB /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -38,6 +66,34 @@
 		F3AAC3E72A78F05E00FAD3EB /* SummaryScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreenAssembly.swift; sourceTree = "<group>"; };
 		F3AAC3E92A78F09700FAD3EB /* SummaryScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreenViewController.swift; sourceTree = "<group>"; };
 		F3AAC3EB2A78F09B00FAD3EB /* SummaryScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryScreenView.swift; sourceTree = "<group>"; };
+		F3AAC3EE2A78F9F800FAD3EB /* UIView+extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extra.swift"; sourceTree = "<group>"; };
+		F3AAC3F22A78FA6600FAD3EB /* ProfileBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBlockView.swift; sourceTree = "<group>"; };
+		F3AAC3F42A78FA7D00FAD3EB /* SkillsBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsBlockView.swift; sourceTree = "<group>"; };
+		F3AAC3FA2A78FBDB00FAD3EB /* AppColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppColors.xcassets; sourceTree = "<group>"; };
+		F3AAC3FC2A78FC8D00FAD3EB /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		F3AAC3FF2A78FD7D00FAD3EB /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		F3AAC4072A79099300FAD3EB /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		F3AAC4092A790A3800FAD3EB /* UIStackView+extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+extra.swift"; sourceTree = "<group>"; };
+		F3AAC40B2A790B3F00FAD3EB /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
+		F3AAC40D2A79162900FAD3EB /* NSLayoutConstraint+priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+priority.swift"; sourceTree = "<group>"; };
+		F3AAC40F2A79184D00FAD3EB /* SkillLabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillLabelsView.swift; sourceTree = "<group>"; };
+		F3AAC4122A79187D00FAD3EB /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		F3AAC4142A791EB300FAD3EB /* GetSkillsOfProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSkillsOfProfileUseCase.swift; sourceTree = "<group>"; };
+		F3AAC4172A791F1900FAD3EB /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		F3AAC4192A79217C00FAD3EB /* AboutPersonBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPersonBlockView.swift; sourceTree = "<group>"; };
+		F3AAC41B2A79233B00FAD3EB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		F3AAC41D2A79237400FAD3EB /* GetProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
+		F3AAC4252A7927A600FAD3EB /* sfProDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sfProDisplay-Bold.otf"; sourceTree = "<group>"; };
+		F3AAC4262A7927A600FAD3EB /* sfProDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sfProDisplay-Medium.otf"; sourceTree = "<group>"; };
+		F3AAC4272A7927A600FAD3EB /* sfProDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sfProDisplay-Regular.otf"; sourceTree = "<group>"; };
+		F3AAC42B2A792A2F00FAD3EB /* DeleteSkillOfProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSkillOfProfileUseCase.swift; sourceTree = "<group>"; };
+		F3AAC4332A792AE600FAD3EB /* ProfileDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDatabase.swift; sourceTree = "<group>"; };
+		F3AAC4352A792AEC00FAD3EB /* SkillsOfProfileDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsOfProfileDatabase.swift; sourceTree = "<group>"; };
+		F3AAC4372A792E2600FAD3EB /* DatabaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
+		F3AAC43A2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillOfProfileUseCase.swift; sourceTree = "<group>"; };
+		F3AAC43C2A79365F00FAD3EB /* SkillLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillLabelView.swift; sourceTree = "<group>"; };
+		F3AAC43F2A7958B000FAD3EB /* UIAlertController+extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extra.swift"; sourceTree = "<group>"; };
+		F3DF971A2A7977C400F672B3 /* GetAvatarProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAvatarProfileUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AAC3B92A78E9C300FAD3EB /* Application */,
+				F3AAC42D2A792AAF00FAD3EB /* Data */,
 				F3AAC3BB2A78E9D000FAD3EB /* Domain */,
 				F3AAC3BC2A78E9D800FAD3EB /* Presentation */,
 				F3AAC3BD2A78E9E100FAD3EB /* Extensions */,
@@ -93,8 +150,7 @@
 		F3AAC3BB2A78E9D000FAD3EB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				F3AAC3C22A78EA8200FAD3EB /* Core */,
-				F3AAC3C02A78EA5800FAD3EB /* UseCases */,
+				F3AAC3C02A78EA5800FAD3EB /* UseCase */,
 				F3AAC3BF2A78EA5400FAD3EB /* Model */,
 			);
 			path = Domain;
@@ -114,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AAC3C42A78EAAA00FAD3EB /* UI */,
+				F3AAC40D2A79162900FAD3EB /* NSLayoutConstraint+priority.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,7 +178,9 @@
 		F3AAC3BE2A78E9FA00FAD3EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F3AAC3AE2A78E7F900FAD3EB /* Assets.xcassets */,
+				F3AAC3FE2A78FD7100FAD3EB /* Fonts */,
+				F3AAC3F92A78FBCA00FAD3EB /* Colors */,
+				F3AAC3F82A78FBC500FAD3EB /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -129,35 +188,27 @@
 		F3AAC3BF2A78EA5400FAD3EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3AAC4122A79187D00FAD3EB /* Skill.swift */,
+				F3AAC41B2A79233B00FAD3EB /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F3AAC3C02A78EA5800FAD3EB /* UseCases */ = {
+		F3AAC3C02A78EA5800FAD3EB /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				F3AAC4162A791EFF00FAD3EB /* UseCases */,
+				F3AAC4172A791F1900FAD3EB /* UseCaseProvider.swift */,
 			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		F3AAC3C22A78EA8200FAD3EB /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				F3AAC3C32A78EA8700FAD3EB /* Error */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		F3AAC3C32A78EA8700FAD3EB /* Error */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Error;
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		F3AAC3C42A78EAAA00FAD3EB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				F3AAC3EE2A78F9F800FAD3EB /* UIView+extra.swift */,
+				F3AAC4092A790A3800FAD3EB /* UIStackView+extra.swift */,
+				F3AAC43F2A7958B000FAD3EB /* UIAlertController+extra.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -218,6 +269,7 @@
 		F3AAC3D92A78ED0500FAD3EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3AAC3ED2A78F9BD00FAD3EB /* Views */,
 				F3AAC3E92A78F09700FAD3EB /* SummaryScreenViewController.swift */,
 				F3AAC3EB2A78F09B00FAD3EB /* SummaryScreenView.swift */,
 			);
@@ -238,6 +290,94 @@
 				F3AAC3E22A78EE3C00FAD3EB /* MainCoordinator.swift */,
 			);
 			path = MainCoordinator;
+			sourceTree = "<group>";
+		};
+		F3AAC3ED2A78F9BD00FAD3EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC43E2A7949A800FAD3EB /* SkillsBlock */,
+				F3AAC3F22A78FA6600FAD3EB /* ProfileBlockView.swift */,
+				F3AAC4072A79099300FAD3EB /* CircleImageView.swift */,
+				F3AAC4192A79217C00FAD3EB /* AboutPersonBlockView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3AAC3F82A78FBC500FAD3EB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC3AE2A78E7F900FAD3EB /* AppImages.xcassets */,
+				F3AAC40B2A790B3F00FAD3EB /* AppImages.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F3AAC3F92A78FBCA00FAD3EB /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC3FA2A78FBDB00FAD3EB /* AppColors.xcassets */,
+				F3AAC3FC2A78FC8D00FAD3EB /* AppColors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		F3AAC3FE2A78FD7100FAD3EB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC4252A7927A600FAD3EB /* sfProDisplay-Bold.otf */,
+				F3AAC4262A7927A600FAD3EB /* sfProDisplay-Medium.otf */,
+				F3AAC4272A7927A600FAD3EB /* sfProDisplay-Regular.otf */,
+				F3AAC3FF2A78FD7D00FAD3EB /* AppFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F3AAC4162A791EFF00FAD3EB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC4142A791EB300FAD3EB /* GetSkillsOfProfileUseCase.swift */,
+				F3AAC41D2A79237400FAD3EB /* GetProfileUseCase.swift */,
+				F3AAC42B2A792A2F00FAD3EB /* DeleteSkillOfProfileUseCase.swift */,
+				F3AAC43A2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift */,
+				F3DF971A2A7977C400F672B3 /* GetAvatarProfileUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		F3AAC42D2A792AAF00FAD3EB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC4302A792AC400FAD3EB /* Database */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F3AAC4302A792AC400FAD3EB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC4372A792E2600FAD3EB /* DatabaseProvider.swift */,
+				F3AAC4392A792E2D00FAD3EB /* Databases */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		F3AAC4392A792E2D00FAD3EB /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC4332A792AE600FAD3EB /* ProfileDatabase.swift */,
+				F3AAC4352A792AEC00FAD3EB /* SkillsOfProfileDatabase.swift */,
+			);
+			path = Databases;
+			sourceTree = "<group>";
+		};
+		F3AAC43E2A7949A800FAD3EB /* SkillsBlock */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC3F42A78FA7D00FAD3EB /* SkillsBlockView.swift */,
+				F3AAC40F2A79184D00FAD3EB /* SkillLabelsView.swift */,
+				F3AAC43C2A79365F00FAD3EB /* SkillLabelView.swift */,
+			);
+			path = SkillsBlock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +439,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3AAC3B22A78E7F900FAD3EB /* LaunchScreen.storyboard in Resources */,
-				F3AAC3AF2A78E7F900FAD3EB /* Assets.xcassets in Resources */,
+				F3AAC3AF2A78E7F900FAD3EB /* AppImages.xcassets in Resources */,
+				F3AAC4292A7927A600FAD3EB /* sfProDisplay-Medium.otf in Resources */,
+				F3AAC4282A7927A600FAD3EB /* sfProDisplay-Bold.otf in Resources */,
+				F3AAC42A2A7927A600FAD3EB /* sfProDisplay-Regular.otf in Resources */,
+				F3AAC3FB2A78FBDB00FAD3EB /* AppColors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,16 +454,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3AAC43B2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift in Sources */,
 				F3AAC3D42A78EC2300FAD3EB /* Observable.swift in Sources */,
+				F3AAC41A2A79217C00FAD3EB /* AboutPersonBlockView.swift in Sources */,
+				F3AAC4362A792AEC00FAD3EB /* SkillsOfProfileDatabase.swift in Sources */,
 				F3AAC3E32A78EE3C00FAD3EB /* MainCoordinator.swift in Sources */,
+				F3AAC41C2A79233B00FAD3EB /* Profile.swift in Sources */,
+				F3AAC3F52A78FA7D00FAD3EB /* SkillsBlockView.swift in Sources */,
+				F3AAC42C2A792A2F00FAD3EB /* DeleteSkillOfProfileUseCase.swift in Sources */,
+				F3AAC4152A791EB300FAD3EB /* GetSkillsOfProfileUseCase.swift in Sources */,
+				F3AAC4182A791F1900FAD3EB /* UseCaseProvider.swift in Sources */,
+				F3DF971B2A7977C400F672B3 /* GetAvatarProfileUseCase.swift in Sources */,
 				F3AAC3E82A78F05E00FAD3EB /* SummaryScreenAssembly.swift in Sources */,
 				F3AAC3DE2A78ED5500FAD3EB /* BaseNavigationCoordinator.swift in Sources */,
+				F3AAC40E2A79162900FAD3EB /* NSLayoutConstraint+priority.swift in Sources */,
 				F3AAC3DC2A78ED2700FAD3EB /* AppCoordinator.swift in Sources */,
+				F3AAC40A2A790A3800FAD3EB /* UIStackView+extra.swift in Sources */,
+				F3AAC4102A79184D00FAD3EB /* SkillLabelsView.swift in Sources */,
+				F3AAC4402A7958B000FAD3EB /* UIAlertController+extra.swift in Sources */,
 				F3AAC3A62A78E7F700FAD3EB /* AppDelegate.swift in Sources */,
 				F3AAC3EA2A78F09700FAD3EB /* SummaryScreenViewController.swift in Sources */,
+				F3AAC4002A78FD7D00FAD3EB /* AppFonts.swift in Sources */,
+				F3AAC4082A79099300FAD3EB /* CircleImageView.swift in Sources */,
+				F3AAC43D2A79365F00FAD3EB /* SkillLabelView.swift in Sources */,
 				F3AAC3A82A78E7F700FAD3EB /* SceneDelegate.swift in Sources */,
+				F3AAC40C2A790B3F00FAD3EB /* AppImages.swift in Sources */,
 				F3AAC3E52A78EFF600FAD3EB /* SummaryScreenViewModel.swift in Sources */,
+				F3AAC41E2A79237400FAD3EB /* GetProfileUseCase.swift in Sources */,
+				F3AAC3EF2A78F9F800FAD3EB /* UIView+extra.swift in Sources */,
+				F3AAC4382A792E2600FAD3EB /* DatabaseProvider.swift in Sources */,
 				F3AAC3E02A78ED8100FAD3EB /* Coordinator.swift in Sources */,
+				F3AAC4132A79187D00FAD3EB /* Skill.swift in Sources */,
+				F3AAC4342A792AE600FAD3EB /* ProfileDatabase.swift in Sources */,
+				F3AAC3FD2A78FC8D00FAD3EB /* AppColors.swift in Sources */,
+				F3AAC3F32A78FA6600FAD3EB /* ProfileBlockView.swift in Sources */,
 				F3AAC3EC2A78F09B00FAD3EB /* SummaryScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

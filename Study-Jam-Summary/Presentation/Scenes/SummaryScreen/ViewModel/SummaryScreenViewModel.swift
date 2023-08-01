@@ -1,19 +1,31 @@
 protocol SummaryScreenViewModel: AnyObject {
     
+    // MARK: - Output
+    
+    var avatar: Observable<String> { get }
+    
+    var profile: Observable<Profile> { get }
+    
+    var skills: Observable<[Skill]> { get }
+    
     // MARK: - Input
 
     func viewDidLoad()
     
-    // MARK: - Output
+    func addNewSkill(title: String)
     
-    var error: Observable<String> { get }
+    func deleteSkill(id: String)
 }
 
 final class SummaryScreenViewModelImp: SummaryScreenViewModel {
     
     // MARK: - Output
-
-    public var error: Observable<String> = .init("")
+    
+    var skills: Observable<[Skill]> = .init(.init())
+    
+    var profile: Observable<Profile> = .init(.init())
+    
+    var avatar: Observable<String> = .init(.init())
     
     // MARK: - Private Properties
 
@@ -27,8 +39,46 @@ final class SummaryScreenViewModelImp: SummaryScreenViewModel {
 
     // MARK: - Input
 
-    public func viewDidLoad() {
-        
+    func viewDidLoad() {
+        getProfile()
+        getSkillsOfProfile()
+    }
+    
+    func addNewSkill(title: String) {
+        dependencies.addSkillOfProfileUseCase.invoke(
+            title: title
+        ) { [weak self] result in
+            switch result {
+            case .success:
+                self?.getSkillsOfProfile()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func deleteSkill(id: String) {
+        dependencies.deleteSkillOfProfileUseCase.invoke(
+            id: id
+        ) { [weak self] result in
+            switch result {
+            case .success:
+                self?.getSkillsOfProfile()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func getSkillsOfProfile() {
+        skills.value = dependencies.getSkillsOfProfileUseCase.invoke()
+    }
+    
+    private func getProfile() {
+        profile.value = dependencies.getProfileUseCase.invoke()
+        avatar.value = dependencies.getAvatarProfileUseCase.invoke()
     }
 }
 
@@ -36,6 +86,10 @@ final class SummaryScreenViewModelImp: SummaryScreenViewModel {
 
 extension SummaryScreenViewModelImp {
     struct Dependencies {
-        
+        let getSkillsOfProfileUseCase: GetSkillsOfProfileUseCase
+        let getProfileUseCase: GetProfileUseCase
+        let addSkillOfProfileUseCase: AddSkillOfProfileUseCase
+        let deleteSkillOfProfileUseCase: DeleteSkillOfProfileUseCase
+        let getAvatarProfileUseCase: GetAvatarProfileUseCase
     }
 }

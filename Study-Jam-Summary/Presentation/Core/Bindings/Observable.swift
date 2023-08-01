@@ -6,11 +6,6 @@ class Observable<T> {
         self.listener = listener
     }
     
-    func bindAndFire(_ listener: Listener?) {
-        self.listener = listener
-        listener?(value)
-    }
-    
     var value: T {
         didSet {
             listener?(value)

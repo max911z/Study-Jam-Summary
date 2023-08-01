@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F3AAC3A62A78E7F700FAD3EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3A52A78E7F700FAD3EB /* AppDelegate.swift */; };
 		F3AAC3A82A78E7F700FAD3EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3A72A78E7F700FAD3EB /* SceneDelegate.swift */; };
-		F3AAC3AA2A78E7F700FAD3EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3A92A78E7F700FAD3EB /* ViewController.swift */; };
 		F3AAC3AF2A78E7F900FAD3EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC3AE2A78E7F900FAD3EB /* Assets.xcassets */; };
 		F3AAC3B22A78E7F900FAD3EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC3B02A78E7F900FAD3EB /* LaunchScreen.storyboard */; };
 		F3AAC3D42A78EC2300FAD3EB /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC3D32A78EC2300FAD3EB /* Observable.swift */; };
@@ -27,7 +26,6 @@
 		F3AAC3A22A78E7F700FAD3EB /* Study-Jam-Summary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study-Jam-Summary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AAC3A52A78E7F700FAD3EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3AAC3A72A78E7F700FAD3EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3AAC3A92A78E7F700FAD3EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3AAC3AE2A78E7F900FAD3EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3AAC3B12A78E7F900FAD3EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3AAC3B32A78E7F900FAD3EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				F3AAC3BB2A78E9D000FAD3EB /* Domain */,
 				F3AAC3BC2A78E9D800FAD3EB /* Presentation */,
 				F3AAC3BD2A78E9E100FAD3EB /* Extensions */,
-				F3AAC3A92A78E7F700FAD3EB /* ViewController.swift */,
 			);
 			path = "Study-Jam-Summary";
 			sourceTree = "<group>";
@@ -316,7 +313,6 @@
 				F3AAC3D42A78EC2300FAD3EB /* Observable.swift in Sources */,
 				F3AAC3E32A78EE3C00FAD3EB /* MainCoordinator.swift in Sources */,
 				F3AAC3E82A78F05E00FAD3EB /* SummaryScreenAssembly.swift in Sources */,
-				F3AAC3AA2A78E7F700FAD3EB /* ViewController.swift in Sources */,
 				F3AAC3DE2A78ED5500FAD3EB /* BaseNavigationCoordinator.swift in Sources */,
 				F3AAC3DC2A78ED2700FAD3EB /* AppCoordinator.swift in Sources */,
 				F3AAC3A62A78E7F700FAD3EB /* AppDelegate.swift in Sources */,

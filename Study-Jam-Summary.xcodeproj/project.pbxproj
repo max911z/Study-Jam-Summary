@@ -37,6 +37,9 @@
 		F3AAC41A2A79217C00FAD3EB /* AboutPersonBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC4192A79217C00FAD3EB /* AboutPersonBlockView.swift */; };
 		F3AAC41C2A79233B00FAD3EB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC41B2A79233B00FAD3EB /* Profile.swift */; };
 		F3AAC41E2A79237400FAD3EB /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC41D2A79237400FAD3EB /* GetProfileUseCase.swift */; };
+		F3AAC4282A7927A600FAD3EB /* sfProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC4252A7927A600FAD3EB /* sfProDisplay-Bold.otf */; };
+		F3AAC4292A7927A600FAD3EB /* sfProDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC4262A7927A600FAD3EB /* sfProDisplay-Medium.otf */; };
+		F3AAC42A2A7927A600FAD3EB /* sfProDisplay-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F3AAC4272A7927A600FAD3EB /* sfProDisplay-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		F3AAC4192A79217C00FAD3EB /* AboutPersonBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPersonBlockView.swift; sourceTree = "<group>"; };
 		F3AAC41B2A79233B00FAD3EB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		F3AAC41D2A79237400FAD3EB /* GetProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
+		F3AAC4252A7927A600FAD3EB /* sfProDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sfProDisplay-Bold.otf"; sourceTree = "<group>"; };
+		F3AAC4262A7927A600FAD3EB /* sfProDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sfProDisplay-Medium.otf"; sourceTree = "<group>"; };
+		F3AAC4272A7927A600FAD3EB /* sfProDisplay-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sfProDisplay-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +323,9 @@
 		F3AAC3FE2A78FD7100FAD3EB /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F3AAC4252A7927A600FAD3EB /* sfProDisplay-Bold.otf */,
+				F3AAC4262A7927A600FAD3EB /* sfProDisplay-Medium.otf */,
+				F3AAC4272A7927A600FAD3EB /* sfProDisplay-Regular.otf */,
 				F3AAC3FF2A78FD7D00FAD3EB /* AppFonts.swift */,
 			);
 			path = Fonts;
@@ -391,6 +400,9 @@
 			files = (
 				F3AAC3B22A78E7F900FAD3EB /* LaunchScreen.storyboard in Resources */,
 				F3AAC3AF2A78E7F900FAD3EB /* AppImages.xcassets in Resources */,
+				F3AAC4292A7927A600FAD3EB /* sfProDisplay-Medium.otf in Resources */,
+				F3AAC4282A7927A600FAD3EB /* sfProDisplay-Bold.otf in Resources */,
+				F3AAC42A2A7927A600FAD3EB /* sfProDisplay-Regular.otf in Resources */,
 				F3AAC3FB2A78FBDB00FAD3EB /* AppColors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

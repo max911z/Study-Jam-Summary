@@ -5,7 +5,8 @@ enum SummaryScreenAssembly {
                 getSkillsOfProfileUseCase: UseCaseProvider.instance.getSkillsOfProfileUseCase,
                 getProfileUseCase: UseCaseProvider.instance.getProfileUseCase,
                 addSkillOfProfileUseCase: UseCaseProvider.instance.addNewSkillUseCase,
-                deleteSkillOfProfileUseCase: UseCaseProvider.instance.deleteSkillOfProfileUseCase
+                deleteSkillOfProfileUseCase: UseCaseProvider.instance.deleteSkillOfProfileUseCase,
+                getAvatarProfileUseCase: UseCaseProvider.instance.getAvatarProfileUseCase
             )
         )
 

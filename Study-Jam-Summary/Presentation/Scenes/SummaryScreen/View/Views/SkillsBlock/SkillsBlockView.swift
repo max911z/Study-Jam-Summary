@@ -91,10 +91,12 @@ final class SkillsBlockView: UIView {
         NSLayoutConstraint.activate([
             titleBlockLabel.topAnchor.constraint(equalTo: topAnchor),
             titleBlockLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            titleBlockLabel.trailingAnchor.constraint(greaterThanOrEqualTo: editButton.leadingAnchor, constant: 8),
-            titleBlockLabel.heightAnchor.constraint(equalToConstant: 24),
+            titleBlockLabel.trailingAnchor.constraint(greaterThanOrEqualTo: editButton.leadingAnchor,
+                                                      constant: Constants.titleBlockLabelTrailingInset),
+            titleBlockLabel.heightAnchor.constraint(equalToConstant: Constants.titleBlockLabelHeight),
             
-            skillLabelsView.topAnchor.constraint(equalTo: titleBlockLabel.bottomAnchor, constant: 16),
+            skillLabelsView.topAnchor.constraint(equalTo: titleBlockLabel.bottomAnchor,
+                                                 constant: Constants.skillLabelsViewTopInset),
             skillLabelsView.leadingAnchor.constraint(equalTo: leadingAnchor),
             skillLabelsView.trailingAnchor.constraint(equalTo: trailingAnchor),
             skillLabelsView.bottomAnchor.constraint(equalTo: bottomAnchor)
@@ -127,8 +129,8 @@ final class SkillsBlockView: UIView {
     private func setupConstraintForButton(button: UIButton) {
         NSLayoutConstraint.activate([
             button.topAnchor.constraint(equalTo: topAnchor),
-            button.widthAnchor.constraint(equalToConstant: 24),
-            button.heightAnchor.constraint(equalToConstant: 24),
+            button.widthAnchor.constraint(equalToConstant: Constants.buttonsSize.width),
+            button.heightAnchor.constraint(equalToConstant: Constants.buttonsSize.height),
             button.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
@@ -154,6 +156,11 @@ final class SkillsBlockView: UIView {
 
 private extension SkillsBlockView {
     enum Constants {
+        static let titleBlockLabelTrailingInset: CGFloat = 8
+        static let titleBlockLabelHeight: CGFloat = 24
         
+        static let skillLabelsViewTopInset: CGFloat = 16
+        
+        static let buttonsSize = CGSize(width: 24, height: 24)
     }
 }

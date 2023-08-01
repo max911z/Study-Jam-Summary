@@ -35,4 +35,10 @@ final class UseCaseProvider {
             database: databaseProvider.skillsOfProfileDatabase
         )
     }()
+    
+    lazy var getAvatarProfileUseCase: GetAvatarProfileUseCase = {
+        .init(
+            database: databaseProvider.profileDatabase
+        )
+    }()
 }

@@ -46,6 +46,10 @@ final class SummaryScreenViewController: UIViewController {
             self?.customView.setProfileData(profile)
         }
         
+        viewModel.avatar.bind { [ weak self ] avatar in
+            self?.customView.setAvatar(avatar)
+        }
+        
         customView.skillsBlockBiew.skillLabelDeleteButtonTap = { [ weak self ] skill in
             self?.viewModel.deleteSkill(id: skill.id)
         }

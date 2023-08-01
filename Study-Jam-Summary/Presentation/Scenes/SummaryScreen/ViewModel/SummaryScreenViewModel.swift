@@ -2,6 +2,8 @@ protocol SummaryScreenViewModel: AnyObject {
     
     // MARK: - Output
     
+    var avatar: Observable<String> { get }
+    
     var profile: Observable<Profile> { get }
     
     var skills: Observable<[Skill]> { get }
@@ -22,6 +24,8 @@ final class SummaryScreenViewModelImp: SummaryScreenViewModel {
     var skills: Observable<[Skill]> = .init(.init())
     
     var profile: Observable<Profile> = .init(.init())
+    
+    var avatar: Observable<String> = .init(.init())
     
     // MARK: - Private Properties
 
@@ -74,6 +78,7 @@ final class SummaryScreenViewModelImp: SummaryScreenViewModel {
     
     private func getProfile() {
         profile.value = dependencies.getProfileUseCase.invoke()
+        avatar.value = dependencies.getAvatarProfileUseCase.invoke()
     }
 }
 
@@ -85,5 +90,6 @@ extension SummaryScreenViewModelImp {
         let getProfileUseCase: GetProfileUseCase
         let addSkillOfProfileUseCase: AddSkillOfProfileUseCase
         let deleteSkillOfProfileUseCase: DeleteSkillOfProfileUseCase
+        let getAvatarProfileUseCase: GetAvatarProfileUseCase
     }
 }

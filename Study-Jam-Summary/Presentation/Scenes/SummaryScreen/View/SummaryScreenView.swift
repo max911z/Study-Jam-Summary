@@ -38,6 +38,10 @@ final class SummaryScreenView: UIView {
         aboutPersonBlockView.setInformationPerson(profile.description)
     }
     
+    func setAvatar(_ avatar: String) {
+        profileBlockView.setAvatar(avatar)
+    }
+    
     // MARK: - Private Methods
     
     private func setup() {

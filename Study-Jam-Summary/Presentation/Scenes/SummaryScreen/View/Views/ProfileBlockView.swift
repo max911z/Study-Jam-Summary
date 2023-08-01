@@ -15,7 +15,6 @@ final class ProfileBlockView: UIView {
     }(UILabel())
     
     private lazy var avatarImage: CircleImageView = {
-        $0.image = UIImage(named: "avatar")
         $0.contentMode = .scaleAspectFill
         $0.translatesAutoresizingMaskIntoConstraints = false
         
@@ -36,7 +35,7 @@ final class ProfileBlockView: UIView {
         $0.textColor = AppColors.gray
         $0.textAlignment = .center
         $0.font = AppFonts.regular14
-        $0.numberOfLines = 2
+        $0.numberOfLines = Constants.detailInformationPersonLabelCountLines
         $0.translatesAutoresizingMaskIntoConstraints = false
         
         return $0
@@ -44,7 +43,7 @@ final class ProfileBlockView: UIView {
     
     private let informationPlaceStackView = UIStackView(
         axis: .horizontal,
-        spacing: 2
+        spacing: Constants.informationPlaceStackViewSpacing
     )
     
     private let placeIconImageView: UIImageView = {
@@ -82,6 +81,10 @@ final class ProfileBlockView: UIView {
         placeLabel.text = profile.place
     }
     
+    func setAvatar(_ avatar: String) {
+        avatarImage.image = UIImage(named: avatar)
+    }
+    
     // MARK: - Private Methods
     
     private func setup() {
@@ -113,33 +116,35 @@ final class ProfileBlockView: UIView {
         informationPlaceStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            titleScreenLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 18),
+            titleScreenLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor,
+                                                  constant: Constants.titleScreenLabelTopInset),
             titleScreenLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            avatarImage.topAnchor.constraint(equalTo: titleScreenLabel.bottomAnchor, constant: 24+18),
+            avatarImage.topAnchor.constraint(equalTo: titleScreenLabel.bottomAnchor,
+                                             constant: Constants.avatarImageTopInset),
             avatarImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            avatarImage.widthAnchor.constraint(equalToConstant: 120),
-            avatarImage.heightAnchor.constraint(equalToConstant: 120),
+            avatarImage.widthAnchor.constraint(equalToConstant: Constants.avatarImageSize.width),
+            avatarImage.heightAnchor.constraint(equalToConstant: Constants.avatarImageSize.height),
 
-            name.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 16),
-            name.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 51),
-            name.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -51),
+            name.topAnchor.constraint(equalTo: avatarImage.bottomAnchor,
+                                      constant: Constants.nameTopInset),
+            name.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                          constant: Constants.nameHorizontalInset),
+            name.trailingAnchor.constraint(equalTo: trailingAnchor,
+                                           constant: -Constants.nameHorizontalInset),
 
-            detailInformationPersonLabel.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 4),
+            detailInformationPersonLabel.topAnchor.constraint(equalTo: name.bottomAnchor,
+                                                              constant: Constants.detailInformationPersonLabelTopInset),
             detailInformationPersonLabel.leadingAnchor.constraint(equalTo: name.leadingAnchor),
             detailInformationPersonLabel.trailingAnchor.constraint(equalTo: name.trailingAnchor),
 
             informationPlaceStackView.topAnchor.constraint(equalTo: detailInformationPersonLabel.bottomAnchor),
             informationPlaceStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            informationPlaceStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -19),
-//             TODO:
-//            informationPlaceStackView.leadingAnchor.constraint(equalTo: name.leadingAnchor)
-//                .withPriority(.defaultHigh),
-//            informationPlaceStackView.trailingAnchor.constraint(equalTo: name.trailingAnchor)
-//                .withPriority(.defaultHigh),
+            informationPlaceStackView.bottomAnchor.constraint(equalTo: bottomAnchor,
+                                                              constant: -Constants.informationPlaceStackViewBottomInset),
             
-            placeIconImageView.widthAnchor.constraint(equalToConstant: 16),
-            placeIconImageView.heightAnchor.constraint(equalToConstant: 16)
+            placeIconImageView.widthAnchor.constraint(equalToConstant: Constants.placeIconImageViewSize.width),
+            placeIconImageView.heightAnchor.constraint(equalToConstant: Constants.placeIconImageViewSize.height)
         ])
     }
 }
@@ -148,6 +153,22 @@ final class ProfileBlockView: UIView {
 
 private extension ProfileBlockView {
     enum Constants {
+        static let titleScreenLabelTopInset: CGFloat = 18
         
+        static let avatarImageTopInset: CGFloat = 24+18
+        static let avatarImageSize = CGSize(width: 120, height: 120)
+        
+        static let nameTopInset: CGFloat = 16
+        static let nameHorizontalInset: CGFloat = 51
+        
+        static let detailInformationPersonLabelTopInset: CGFloat = 4
+        
+        static let informationPlaceStackViewBottomInset: CGFloat = 19
+        
+        static let placeIconImageViewSize = CGSize(width: 16, height: 16)
+        
+        static let informationPlaceStackViewSpacing: CGFloat = 2
+        
+        static let detailInformationPersonLabelCountLines = 2
     }
 }

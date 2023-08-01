@@ -47,6 +47,7 @@
 		F3AAC43B2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC43A2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift */; };
 		F3AAC43D2A79365F00FAD3EB /* SkillLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC43C2A79365F00FAD3EB /* SkillLabelView.swift */; };
 		F3AAC4402A7958B000FAD3EB /* UIAlertController+extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AAC43F2A7958B000FAD3EB /* UIAlertController+extra.swift */; };
+		F3DF971B2A7977C400F672B3 /* GetAvatarProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DF971A2A7977C400F672B3 /* GetAvatarProfileUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		F3AAC43A2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillOfProfileUseCase.swift; sourceTree = "<group>"; };
 		F3AAC43C2A79365F00FAD3EB /* SkillLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillLabelView.swift; sourceTree = "<group>"; };
 		F3AAC43F2A7958B000FAD3EB /* UIAlertController+extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+extra.swift"; sourceTree = "<group>"; };
+		F3DF971A2A7977C400F672B3 /* GetAvatarProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAvatarProfileUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 				F3AAC41D2A79237400FAD3EB /* GetProfileUseCase.swift */,
 				F3AAC42B2A792A2F00FAD3EB /* DeleteSkillOfProfileUseCase.swift */,
 				F3AAC43A2A79304000FAD3EB /* AddSkillOfProfileUseCase.swift */,
+				F3DF971A2A7977C400F672B3 /* GetAvatarProfileUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				F3AAC42C2A792A2F00FAD3EB /* DeleteSkillOfProfileUseCase.swift in Sources */,
 				F3AAC4152A791EB300FAD3EB /* GetSkillsOfProfileUseCase.swift in Sources */,
 				F3AAC4182A791F1900FAD3EB /* UseCaseProvider.swift in Sources */,
+				F3DF971B2A7977C400F672B3 /* GetAvatarProfileUseCase.swift in Sources */,
 				F3AAC3E82A78F05E00FAD3EB /* SummaryScreenAssembly.swift in Sources */,
 				F3AAC3DE2A78ED5500FAD3EB /* BaseNavigationCoordinator.swift in Sources */,
 				F3AAC40E2A79162900FAD3EB /* NSLayoutConstraint+priority.swift in Sources */,

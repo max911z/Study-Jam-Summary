@@ -27,7 +27,23 @@ final class SummaryScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setup() {
+        setupBindings()
+        viewModel.viewDidLoad()
+    }
+    
+    private func setupBindings()  {
+        viewModel.skills.bind { [ weak self ] skills in
+            self?.customView.skillsBlockBiew.setSkills(skills)
+        }
         
-        view.backgroundColor = .yellow
+        viewModel.profile.bind { [ weak self ] profile in
+            self?.customView.setProfileData(profile)
+        }
     }
 }

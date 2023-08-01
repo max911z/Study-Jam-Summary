@@ -6,14 +6,18 @@ protocol SummaryScreenViewModel: AnyObject {
     
     // MARK: - Output
     
-    var error: Observable<String> { get }
+    var profile: Observable<Profile> { get }
+    
+    var skills: Observable<[Skill]> { get }
 }
 
 final class SummaryScreenViewModelImp: SummaryScreenViewModel {
     
     // MARK: - Output
-
-    public var error: Observable<String> = .init("")
+    
+    var skills: Observable<[Skill]> = .init(.init())
+    
+    var profile: Observable<Profile> = .init(.init())
     
     // MARK: - Private Properties
 
@@ -27,8 +31,19 @@ final class SummaryScreenViewModelImp: SummaryScreenViewModel {
 
     // MARK: - Input
 
-    public func viewDidLoad() {
-        
+    func viewDidLoad() {
+        getProfile()
+        getSkillsOfProfile()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func getSkillsOfProfile() {
+        skills.value = dependencies.getSkillsOfProfileUseCase.invoke()
+    }
+    
+    private func getProfile() {
+        profile.value = dependencies.getProfileUseCase.invoke()
     }
 }
 
@@ -36,6 +51,7 @@ final class SummaryScreenViewModelImp: SummaryScreenViewModel {
 
 extension SummaryScreenViewModelImp {
     struct Dependencies {
-        
+        let getSkillsOfProfileUseCase: GetSkillsOfProfileUseCase
+        let getProfileUseCase: GetProfileUseCase
     }
 }
